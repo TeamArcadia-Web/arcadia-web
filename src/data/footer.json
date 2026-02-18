@@ -1,0 +1,13 @@
+{
+    "sns": [
+        { "label": "디스코드", "href": "https://discord.gg/NanAFkRdww", "icon": "/icons/discord.svg" },
+        { "label": "유튜브", "href": "https://www.youtube.com/@Arcadia-R", "icon": "/icons/youtube.svg" },
+        { "label": "깃허브", "href": "https://github.com/TeamArcadia/", "icon": "/icons/github.svg" }
+    ],
+    "pages": [
+        { "label": "서비스 이용약관", "href": "/terms/" },
+        { "label": "라이선스 및 저작권", "href": "/license/" },
+        { "label": "커뮤니티 이용 가이드라인", "href": "/community-guidelines/" },
+        { "label": "서비스 운영정책", "href": "/operating-policy/" }
+    ]
+}

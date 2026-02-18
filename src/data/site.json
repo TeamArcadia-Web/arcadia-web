@@ -1,0 +1,45 @@
+{
+    "siteName": "ARCADIA",
+    "heroTagline": "Ever-evolving to shape the ideal",
+    "aboutHeadline": "끊임없이 진화하는 팀",
+    "aboutDescription": "TEAM ARCADIA는 끊임없이 진화하며 이상적인 모습을 만들어 갑니다. 다양한 분야의 열정적인 멤버들이 모여 창의적인 프로젝트를 함께 진행하고 있습니다.",
+    "discord": {
+        "href": "https://discord.gg/NanAFkRdww",
+        "inviteCode": "NanAFkRdww",
+        "message": "공식 디스코드 서버에서 업데이트와 커뮤니티 소식을 확인하세요.",
+        "buttonLabel": "가입하기"
+    },
+    "contact": {
+        "email": "contact@arcadiateam.kr",
+        "message": "문의 사항이 있으시면 아래 양식을 작성해 주세요."
+    },
+    "copyright": "© 2026 Team Arcadia. All rights reserved.",
+    "teamName": "Team Arcadia",
+    "pages": {
+        "team": {
+            "label": "Team",
+            "title": "팀원 소개",
+            "placeholder": "팀원 소개 내용을 작성해 주세요."
+        },
+        "terms": {
+            "label": "Terms",
+            "title": "서비스 이용약관",
+            "placeholder": "서비스 이용약관 내용을 작성해 주세요."
+        },
+        "license": {
+            "label": "License",
+            "title": "라이선스 및 저작권",
+            "placeholder": "라이선스 및 저작권 내용을 작성해 주세요."
+        },
+        "communityGuidelines": {
+            "label": "Guidelines",
+            "title": "커뮤니티 이용 가이드라인",
+            "placeholder": "커뮤니티 이용 가이드라인 내용을 작성해 주세요."
+        },
+        "operatingPolicy": {
+            "label": "Policy",
+            "title": "서비스 운영정책",
+            "placeholder": "서비스 운영정책 내용을 작성해 주세요."
+        }
+    }
+}

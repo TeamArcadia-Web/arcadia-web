@@ -11,6 +11,9 @@
 # testing
 /coverage
 
+# generated
+src/data/team-resolved.json
+
 # next.js
 /.next/
 /out/
