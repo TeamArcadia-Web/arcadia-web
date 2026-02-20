@@ -1,40 +1,10 @@
 [
     {
-        "name": "한영",
+        "name": "Member 0",
         "role": "CEO / Developer",
-        "detail": "한영입니다",
+        "detail": "desc",
         "tags": ["Founder"],
-        "avatar": "/images/team/hanyung.jpg"
-    },
-    {
-        "name": "아듀",
-        "role": "Manager / Developer",
-        "detail": "아듀입니다.",
-        "tags": ["Co-Founder"]
-    },
-    {
-        "name": "라밍",
-        "role": "Manager / Developer",
-        "detail": "라밍입니다."
-    },
-    {
-        "name": "림드",
-        "role": "Designer / Modeler",
-        "detail": "림드입니다."
-    },
-    {
-        "name": "배코",
-        "role": "Architect",
-        "detail": "배코입니다."
-    },
-    {
-        "name": "미트",
-        "role": "Designer",
-        "detail": "미트입니다."
-    },
-    {
-        "name": "가드",
-        "role": "Assistant",
-        "detail": "가드입니다."
+        "avatar": ""
     }
+
 ]

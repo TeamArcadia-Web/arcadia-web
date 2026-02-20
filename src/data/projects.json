@@ -3,58 +3,49 @@
         "title": "귀속아이템 플러그인",
         "desc": "아이템을 플레이어에게 귀속시킵니다.",
         "links": [
-            { "label": "YouTube", "href": "https://www.youtube.com/watch?v=4hXT6lbCdMU", "icon": "/icons/youtube.svg" },
-            { "label": "GitHub", "href": "https://github.com/TeamArcadia/", "icon": "/icons/github.svg" }
+            { "label": "YouTube", "href": "https://www.youtube.com/watch?v=4hXT6lbCdMU", "icon": "/icons/youtube.svg" }
         ]
     },
     {
         "title": "랜덤박스 플러그인",
         "desc": "랜덤으로 아이템이 나오는 가챠를 추가합니다.",
         "links": [
-            { "label": "YouTube", "href": "https://www.youtube.com/watch?v=FZOqoNX2U4Q", "icon": "/icons/youtube.svg" },
-            { "label": "GitHub", "href": "https://github.com/TeamArcadia/", "icon": "/icons/github.svg" }
+            { "label": "YouTube", "href": "https://www.youtube.com/watch?v=FZOqoNX2U4Q", "icon": "/icons/youtube.svg" }
         ]
     },
     {
-        "title": "리소스 팩",
-        "desc": "팀 제작 텍스처 및 사운드 리소스 팩",
+        "title": "Project 0",
+        "desc": "description",
         "links": [
             { "label": "GitHub", "href": "https://github.com/TeamArcadia/", "icon": "/icons/github.svg" }
         ]
     },
     {
-        "title": "튜토리얼 시리즈",
-        "desc": "초보자를 위한 모딩 가이드 영상",
-        "links": [
-            { "label": "YouTube", "href": "https://www.youtube.com/@Arcadia-R", "icon": "/icons/youtube.svg" }
-        ]
-    },
-    {
-        "title": "서버 플러그인",
-        "desc": "멀티플레이 서버용 커스텀 플러그인",
+        "title": "Project 0",
+        "desc": "description",
         "links": [
             { "label": "GitHub", "href": "https://github.com/TeamArcadia/", "icon": "/icons/github.svg" }
         ]
     },
     {
-        "title": "Arcadia 런처",
-        "desc": "팀 프로젝트 통합 런처 및 업데이트 관리",
+        "title": "Project 0",
+        "desc": "description",
         "links": [
-            { "label": "YouTube", "href": "https://www.youtube.com/watch?v=4hXT6lbCdMU", "icon": "/icons/youtube.svg" },
             { "label": "GitHub", "href": "https://github.com/TeamArcadia/", "icon": "/icons/github.svg" }
         ]
     },
     {
-        "title": "모드 매니저",
-        "desc": "게임 모드 설치·관리·동기화를 한 곳에서",
+        "title": "Project 0",
+        "desc": "description",
         "links": [
-            { "label": "YouTube", "href": "https://www.youtube.com/watch?v=FZOqoNX2U4Q", "icon": "/icons/youtube.svg" },
             { "label": "GitHub", "href": "https://github.com/TeamArcadia/", "icon": "/icons/github.svg" }
         ]
     },
     {
-        "title": "커뮤니티 위키",
-        "desc": "팀 프로젝트 문서화 및 가이드 사이트",
-        "links": []
+        "title": "Project 0",
+        "desc": "description",
+        "links": [
+            { "label": "GitHub", "href": "https://github.com/TeamArcadia/", "icon": "/icons/github.svg" }
+        ]
     }
 ]

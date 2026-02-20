@@ -253,9 +253,6 @@ export default function Navbar() {
                             className={`transition-opacity duration-300 ${open ? "opacity-100" : "opacity-0"}`}
                             style={{ transitionDelay: open ? "280ms" : "0ms" }}
                         >
-                            <p className="mb-3 px-4 text-[10px] font-semibold uppercase tracking-[0.18em] text-zinc-500">
-                                Follow
-                            </p>
                             <div className="flex items-center gap-2 px-4">
                                 {FOOTER_SNS.map((item) => (
                                     <a

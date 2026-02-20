@@ -101,11 +101,11 @@ export default function Projects() {
                                 transform: `translateX(-${index * CARD_STEP}px)`,
                             }}
                         >
-                            {PROJECTS.map((project) => {
+                            {PROJECTS.map((project, i) => {
                                 const thumbnailUrl = getThumbnailUrl(project.links);
                                 return (
                                     <div
-                                        key={project.title}
+                                        key={`${project.title}-${i}`}
                                         className="h-[234px] shrink-0 cursor-pointer"
                                         style={{ width: CARD_WIDTH }}
                                         onClick={() => setSelectedProject(project)}
