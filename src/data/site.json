@@ -1,5 +1,6 @@
 {
     "siteName": "ARCADIA",
+    "pageTitle": "ARCADIA | 아르카디아",
     "heroTagline": "Ever-evolving to shape the ideal",
     "aboutHeadline": "아르카디아는 이상을 목표로 합니다",
     "aboutDescription": "Team ARCADIA는 마인크래프트를 중심으로 플러그인, 디자인, 모델링 등 다양한 디지털 프로젝트를 제작하는 팀입니다. 아이디어를 구조화하고 구현하여 이상을 현실로 만들며, 사용자에게 완성도 높은 디지털 경험을 제공합니다.",
@@ -19,12 +20,5 @@
         "message": "문의 사항이 있으시면 아래 양식을 작성해 주세요."
     },
     "copyright": "© 2026 Team Arcadia. All rights reserved.",
-    "teamName": "Team Arcadia",
-    "pages": {
-        "team": {
-            "label": "Team",
-            "title": "팀원 소개",
-            "placeholder": "팀원 소개 내용을 작성해 주세요."
-        }
-    }
+    "teamName": "Team Arcadia"
 }

@@ -58,6 +58,12 @@ export default function Navbar() {
                         transform: scrolled ? "scale(0.9)" : "scale(1)",
                         transition: "transform 0.15s ease-out",
                     }}
+                    onClick={(e) => {
+                        if (window.location.pathname === "/") {
+                            e.preventDefault();
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                        }
+                    }}
                 >
                     <Image
                         src={LOGO_PATHS.main}

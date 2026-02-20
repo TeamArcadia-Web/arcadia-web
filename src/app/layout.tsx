@@ -5,8 +5,10 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import LoadingScreen from "@/components/ui/LoadingScreen";
 import PrototypeNotice from "@/components/ui/PrototypeNotice";
+import { PAGE_TITLE } from "@/lib/constants";
 
 export const metadata: Metadata = {
+    title: PAGE_TITLE,
     icons: {
         icon: "icons/favicon.ico",
     },

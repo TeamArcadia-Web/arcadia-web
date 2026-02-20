@@ -27,6 +27,7 @@ export const SECTION_HEADERS = {
 
 // ============ Hero ============
 export const SITE_NAME = siteData.siteName;
+export const PAGE_TITLE = (siteData as { pageTitle?: string }).pageTitle ?? siteData.siteName;
 export const HERO_TAGLINE = siteData.heroTagline;
 
 export const DISCORD_INVITE = {
@@ -97,8 +98,3 @@ export const LOGO_PATHS = {
     clear: "/icons/arcadia_logo_clear.svg",
     clearZinc: "/icons/arcadia_logo_clear_zinc.svg",
 } as const;
-
-// ============ Sub Pages ============
-export const PAGE_CONTENT = siteData.pages as {
-    team: { label: string; title: string; placeholder: string };
-};

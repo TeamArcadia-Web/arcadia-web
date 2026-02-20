@@ -31,19 +31,26 @@ export default function TeamMemberModal({ member, onClose }: TeamMemberModalProp
         if (!displayMember) return;
         setIsExiting(true);
         setClosingMember(displayMember);
-        onClose();
+        /* onClose는 닫힘 애니메이션 끝난 뒤에만 호출 (부모 selected 유지 → key 유지 → 같은 인스턴스에서 닫힘 모션 재생) */
     };
 
     useEffect(() => {
-        if (member) {
-            setClosingMember(null);
-            setIsExiting(false);
-            setIsEntered(false);
-            const t = requestAnimationFrame(() => {
-                requestAnimationFrame(() => setIsEntered(true));
+        if (!member) return;
+        setClosingMember(null);
+        setIsExiting(false);
+        setIsEntered(false);
+        let cancelled = false;
+        let frame2: number | null = null;
+        const frame1 = requestAnimationFrame(() => {
+            frame2 = requestAnimationFrame(() => {
+                if (!cancelled) setIsEntered(true);
             });
-            return () => cancelAnimationFrame(t);
-        }
+        });
+        return () => {
+            cancelled = true;
+            cancelAnimationFrame(frame1);
+            if (frame2 !== null) cancelAnimationFrame(frame2);
+        };
     }, [member]);
 
     useEffect(() => {
@@ -51,9 +58,10 @@ export default function TeamMemberModal({ member, onClose }: TeamMemberModalProp
         const t = setTimeout(() => {
             setClosingMember(null);
             setIsExiting(false);
+            onClose();
         }, MODAL_CLOSE_MS + 120);
         return () => clearTimeout(t);
-    }, [isExiting]);
+    }, [isExiting, onClose]);
 
     useEffect(() => {
         const onKey = (e: KeyboardEvent) => {

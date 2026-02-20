@@ -54,7 +54,7 @@ export default function TeamMemberGrid({ members }: TeamMemberGridProps) {
                     </button>
                 ))}
             </div>
-            <TeamMemberModal member={selected} onClose={() => setSelected(null)} />
+            <TeamMemberModal key={selected?.name ?? "closed"} member={selected} onClose={() => setSelected(null)} />
         </>
     );
 }
