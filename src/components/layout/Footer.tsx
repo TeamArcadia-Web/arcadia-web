@@ -1,33 +1,62 @@
-import Link from "next/link";
 import Image from "next/image";
 import Container from "./Container";
-import { COPYRIGHT, FOOTER_PAGES, FOOTER_SNS } from "@/lib/constants";
+import { COPYRIGHT, DOCS_HOME, DOCS_PAGES, FOOTER_SNS, STORE_LINK } from "@/lib/constants";
+
+const linkMain =
+    "text-xs font-medium tracking-tight text-zinc-500 transition-colors hover:text-zinc-300 sm:text-[13px]";
+const linkSub =
+    "text-[11px] font-normal tracking-tight text-zinc-600 transition-colors hover:text-zinc-400";
+const Dot = () => <span className="select-none px-1 text-zinc-600/60" aria-hidden>·</span>;
 
 export default function Footer() {
     return (
         <footer className="mt-20">
-            <div className="h-px w-full origin-bottom scale-y-50 bg-gradient-to-r from-zinc-800/25 via-zinc-600/35 to-zinc-800/25" />
+            <div className="h-px w-full bg-gradient-to-r from-transparent via-zinc-600/30 to-transparent" />
             <Container>
-                <div className="flex flex-col items-center gap-8 py-12 md:flex-row md:justify-center md:gap-12">
-                    <nav className="flex flex-wrap justify-center gap-x-6 gap-y-1" aria-label="푸터 메뉴">
-                        {FOOTER_PAGES.map((page) => (
-                            <Link
-                                key={page.href}
-                                href={page.href}
-                                className="text-[13px] font-bold text-zinc-500 transition-colors duration-200 hover:text-zinc-300"
-                            >
-                                {page.label}
-                            </Link>
-                        ))}
-                    </nav>
-                    <div className="flex gap-5">
+                <div className="flex flex-col items-center gap-4 py-8 sm:flex-row sm:flex-wrap sm:items-baseline sm:justify-center sm:gap-x-4 sm:gap-y-4">
+                    <a
+                        href={STORE_LINK.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={linkMain}
+                    >
+                        {STORE_LINK.label}
+                    </a>
+                    <Dot />
+                    <div className="flex flex-wrap items-center justify-center gap-x-1.5 gap-y-1 sm:justify-start sm:gap-x-2">
+                        <a
+                            href={DOCS_HOME.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={linkMain}
+                        >
+                            {DOCS_HOME.label}
+                        </a>
+                        <span className="h-3.5 w-px shrink-0 self-center rounded-full bg-zinc-600/30" aria-hidden />
+                        <nav className="flex flex-wrap items-center justify-center gap-x-1.5 gap-y-1 sm:justify-start sm:gap-x-2" aria-label="Docs 문서">
+                            {DOCS_PAGES.map((page) => (
+                                <a
+                                    key={page.href}
+                                    href={page.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={linkSub}
+                                >
+                                    {page.label}
+                                </a>
+                            ))}
+                        </nav>
+                        <span className="h-3.5 w-px shrink-0 self-center rounded-full bg-zinc-600/30" aria-hidden />
+                    </div>
+                    <Dot />
+                    <div className="flex items-center gap-4">
                         {FOOTER_SNS.map((sns) => (
                             <a
                                 key={sns.label}
                                 href={sns.href}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="opacity-70 transition-opacity hover:opacity-100"
+                                className={`${linkMain} text-zinc-600 hover:text-zinc-400 [&_img]:opacity-80 hover:[&_img]:opacity-100`}
                                 aria-label={sns.label}
                             >
                                 <Image src={sns.icon} alt="" width={20} height={20} className="h-5 w-5" draggable={false} />
@@ -35,9 +64,13 @@ export default function Footer() {
                         ))}
                     </div>
                 </div>
-                <div className="h-px w-full origin-bottom scale-y-50 bg-gradient-to-r from-zinc-800/25 via-zinc-600/35 to-zinc-800/25" />
-                <p className="py-6 text-center text-xs font-bold tracking-wide text-zinc-600">{COPYRIGHT}</p>
             </Container>
+            <div className="h-px w-full bg-gradient-to-r from-transparent via-zinc-600/30 to-transparent" />
+            <div className="mx-auto w-full max-w-[90rem] px-4 py-4 sm:px-6 lg:px-8">
+                <p className="text-center text-[11px] font-normal tracking-wide text-zinc-600/90">
+                    {COPYRIGHT}
+                </p>
+            </div>
         </footer>
     );
 }

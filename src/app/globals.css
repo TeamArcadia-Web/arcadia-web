@@ -21,6 +21,101 @@
     }
 }
 
-body {
-    background-color: #0a0612;
+/* 로고가 트랜스포머처럼 중앙에서 구성되는 애니메이션 */
+@keyframes loading-logo-form {
+    0% {
+        clip-path: circle(0% at 50% 50%);
+        opacity: 0.4;
+        transform: scale(0.75);
+    }
+    60% {
+        clip-path: circle(75% at 50% 50%);
+        opacity: 1;
+        transform: scale(1.02);
+    }
+    100% {
+        clip-path: circle(150% at 50% 50%);
+        opacity: 1;
+        transform: scale(1);
+    }
 }
+
+html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    background: #0a0612;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    -webkit-user-select: none;
+    user-select: none;
+    overflow-x: hidden;
+    /* 밤하늘 톤: 검정 대신 깊은 남색·인디고 */
+    background: linear-gradient(
+        180deg,
+        #0d0a18 0%,
+        #0f0c1e 30%,
+        #120e24 55%,
+        #0e0b1c 85%,
+        #0c0918 100%
+    );
+    min-height: 100dvh;
+    position: relative;
+}
+
+/* 밤하늘 별 패턴 (body 바로 아래 레이어) */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Cg fill='%23fff' fill-opacity='0.55'%3E%3Ccircle cx='12' cy='48' r='0.6'/%3E%3Ccircle cx='89' cy='12' r='0.5'/%3E%3Ccircle cx='234' cy='91' r='0.8'/%3E%3Ccircle cx='367' cy='23' r='0.4'/%3E%3Ccircle cx='445' cy='156' r='0.6'/%3E%3Ccircle cx='523' cy='67' r='0.5'/%3E%3Ccircle cx='678' cy='134' r='0.7'/%3E%3Ccircle cx='734' cy='289' r='0.4'/%3E%3Ccircle cx='56' cy='178' r='0.5'/%3E%3Ccircle cx='178' cy='234' r='0.6'/%3E%3Ccircle cx='312' cy='312' r='0.45'/%3E%3Ccircle cx='489' cy='267' r='0.55'/%3E%3Ccircle cx='601' cy='378' r='0.5'/%3E%3Ccircle cx='23' cy='345' r='0.4'/%3E%3Ccircle cx='267' cy='445' r='0.65'/%3E%3Ccircle cx='412' cy='523' r='0.5'/%3E%3Ccircle cx='556' cy='489' r='0.4'/%3E%3Ccircle cx='145' cy='412' r='0.55'/%3E%3Ccircle cx='701' cy='45' r='0.4'/%3E%3Ccircle cx='789' cy='201' r='0.6'/%3E%3Ccircle cx='34' cy='267' r='0.5'/%3E%3Ccircle cx='198' cy='56' r='0.45'/%3E%3Ccircle cx='345' cy='178' r='0.5'/%3E%3Ccircle cx='478' cy='34' r='0.4'/%3E%3Ccircle cx='612' cy='223' r='0.6'/%3E%3Ccircle cx='123' cy='389' r='0.45'/%3E%3Ccircle cx='289' cy='567' r='0.5'/%3E%3Ccircle cx='434' cy='89' r='0.55'/%3E%3Ccircle cx='567' cy='345' r='0.4'/%3E%3Ccircle cx='45' cy='512' r='0.5'/%3E%3Ccircle cx='256' cy='123' r='0.6'/%3E%3Ccircle cx='391' cy='267' r='0.4'/%3E%3Ccircle cx='512' cy='412' r='0.55'/%3E%3Ccircle cx='634' cy='78' r='0.45'/%3E%3Ccircle cx='167' cy='145' r='0.5'/%3E%3Ccircle cx='301' cy='478' r='0.4'/%3E%3Ccircle cx='423' cy='201' r='0.6'/%3E%3Ccircle cx='545' cy='534' r='0.5'/%3E%3Ccircle cx='678' cy='289' r='0.45'/%3E%3Ccircle cx='78' cy='234' r='0.55'/%3E%3Ccircle cx='212' cy='367' r='0.4'/%3E%3Ccircle cx='356' cy='534' r='0.5'/%3E%3Ccircle cx='489' cy='145' r='0.45'/%3E%3Ccircle cx='623' cy='412' r='0.6'/%3E%3Ccircle cx='734' cy='567' r='0.4'/%3E%3C/g%3E%3Cg fill='%23fff' fill-opacity='0.28'%3E%3Ccircle cx='67' cy='89' r='0.35'/%3E%3Ccircle cx='189' cy='201' r='0.3'/%3E%3Ccircle cx='323' cy='45' r='0.4'/%3E%3Ccircle cx='456' cy='289' r='0.35'/%3E%3Ccircle cx='589' cy='156' r='0.3'/%3E%3Ccircle cx='712' cy='312' r='0.35'/%3E%3Ccircle cx='45' cy='423' r='0.3'/%3E%3Ccircle cx='234' cy='534' r='0.35'/%3E%3Ccircle cx='378' cy='378' r='0.3'/%3E%3Ccircle cx='501' cy='478' r='0.4'/%3E%3Ccircle cx='645' cy='201' r='0.35'/%3E%3Ccircle cx='123' cy='312' r='0.3'/%3E%3Ccircle cx='267' cy='278' r='0.35'/%3E%3Ccircle cx='412' cy='134' r='0.3'/%3E%3Ccircle cx='534' cy='378' r='0.35'/%3E%3Ccircle cx='667' cy='467' r='0.3'/%3E%3Ccircle cx='156' cy='67' r='0.4'/%3E%3Ccircle cx='278' cy='389' r='0.35'/%3E%3Ccircle cx='423' cy='456' r='0.3'/%3E%3Ccircle cx='556' cy='89' r='0.35'/%3E%3Ccircle cx='689' cy='534' r='0.3'/%3E%3Ccircle cx='89' cy='156' r='0.35'/%3E%3Ccircle cx='212' cy='478' r='0.3'/%3E%3Ccircle cx='367' cy='245' r='0.4'/%3E%3Ccircle cx='478' cy='567' r='0.35'/%3E%3Ccircle cx='601' cy='289' r='0.3'/%3E%3Ccircle cx='23' cy='278' r='0.35'/%3E%3Ccircle cx='189' cy='534' r='0.3'/%3E%3Ccircle cx='334' cy='112' r='0.35'/%3E%3Ccircle cx='467' cy='423' r='0.4'/%3E%3Ccircle cx='578' cy='45' r='0.3'/%3E%3Ccircle cx='712' cy='178' r='0.35'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 800px 600px;
+    background-repeat: repeat;
+    opacity: 1;
+}
+
+/* main, footer만 별 위에 올리기 (fixed인 로딩·네비는 건드리지 않음) */
+main,
+footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* 헤더 등 가로 스크롤 시 스크롤바 숨김 (스크롤은 가능) */
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* 이미지 드래그 방지 (클릭·버튼 동작은 유지) */
+img {
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+

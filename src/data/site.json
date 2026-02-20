@@ -1,13 +1,18 @@
 {
     "siteName": "ARCADIA",
     "heroTagline": "Ever-evolving to shape the ideal",
-    "aboutHeadline": "끊임없이 진화하는 팀",
-    "aboutDescription": "TEAM ARCADIA는 끊임없이 진화하며 이상적인 모습을 만들어 갑니다. 다양한 분야의 열정적인 멤버들이 모여 창의적인 프로젝트를 함께 진행하고 있습니다.",
+    "aboutHeadline": "아르카디아는 이상을 목표로 합니다",
+    "aboutDescription": "Team ARCADIA는 마인크래프트를 중심으로 플러그인, 디자인, 모델링 등 다양한 디지털 프로젝트를 제작하는 팀입니다. 아이디어를 구조화하고 구현하여 이상을 현실로 만들며, 사용자에게 완성도 높은 디지털 경험을 제공합니다.",
     "discord": {
         "href": "https://discord.gg/NanAFkRdww",
         "inviteCode": "NanAFkRdww",
         "message": "공식 디스코드 서버에서 업데이트와 커뮤니티 소식을 확인하세요.",
         "buttonLabel": "가입하기"
+    },
+    "store": {
+        "href": "https://store.arcadiateam.kr",
+        "label": "ARCADIA Store",
+        "labelShort": "스토어"
     },
     "contact": {
         "email": "contact@arcadiateam.kr",
@@ -20,26 +25,6 @@
             "label": "Team",
             "title": "팀원 소개",
             "placeholder": "팀원 소개 내용을 작성해 주세요."
-        },
-        "terms": {
-            "label": "Terms",
-            "title": "서비스 이용약관",
-            "placeholder": "서비스 이용약관 내용을 작성해 주세요."
-        },
-        "license": {
-            "label": "License",
-            "title": "라이선스 및 저작권",
-            "placeholder": "라이선스 및 저작권 내용을 작성해 주세요."
-        },
-        "communityGuidelines": {
-            "label": "Guidelines",
-            "title": "커뮤니티 이용 가이드라인",
-            "placeholder": "커뮤니티 이용 가이드라인 내용을 작성해 주세요."
-        },
-        "operatingPolicy": {
-            "label": "Policy",
-            "title": "서비스 운영정책",
-            "placeholder": "서비스 운영정책 내용을 작성해 주세요."
         }
     }
 }

@@ -6,7 +6,6 @@ import { ABOUT_DESCRIPTION, ABOUT_HEADLINE, SCROLL_SECTION, SECTION_HEADERS, TEA
 export default function About() {
     return (
         <section id="about" className={`relative py-24 md:py-32 ${SCROLL_SECTION}`}>
-            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
             <Container>
                 <div className="mx-auto max-w-2xl text-center">
                     <SectionHeader label={SECTION_HEADERS.about.label} title={SECTION_HEADERS.about.title} />

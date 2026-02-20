@@ -13,11 +13,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="ko" className={notoSansKR.variable}>
-            <body className="min-h-dvh bg-[#0a0612] text-white antialiased select-none font-sans">
+        <html lang="ko" className={notoSansKR.variable} suppressHydrationWarning>
+            <body className="relative flex min-h-dvh w-full flex-col overflow-x-hidden bg-[#0a0612] text-white antialiased font-sans select-none">
                 <LoadingScreen />
                 <Navbar />
-                <main className="pt-16 lg:pt-10 lg:pl-[84px]">{children}</main>
+                <main className="min-w-0 flex-1 w-full max-w-full overflow-x-hidden pt-20">{children}</main>
                 <Footer />
             </body>
         </html>

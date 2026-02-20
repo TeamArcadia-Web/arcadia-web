@@ -1,8 +1,8 @@
-import { Bebas_Neue, Noto_Sans_KR } from "next/font/google";
+import localFont from "next/font/local";
+import { Noto_Sans_KR } from "next/font/google";
 
-export const blackOpsOne = Bebas_Neue({
-    subsets: ["latin"],
-    weight: "400",
+export const blackOpsOne = localFont({
+    src: "../assets/fonts/BlackOpsOne-Regular.ttf",
     variable: "--font-blackops",
 });
 

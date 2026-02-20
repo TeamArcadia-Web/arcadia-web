@@ -36,6 +36,12 @@ export const DISCORD_INVITE = {
     buttonLabel: siteData.discord.buttonLabel,
 } as const;
 
+export const STORE_LINK = {
+    href: siteData.store.href,
+    label: siteData.store.label,
+    labelShort: (siteData.store as { labelShort?: string }).labelShort ?? siteData.store.label,
+} as const;
+
 // ============ About ============
 export const ABOUT_HEADLINE = siteData.aboutHeadline ?? "";
 export const ABOUT_DESCRIPTION = siteData.aboutDescription;
@@ -65,7 +71,13 @@ export const CONTACT_MESSAGE = siteData.contact.message;
 
 // ============ Footer ============
 export const FOOTER_SNS = footerData.sns as readonly { label: string; href: string; icon: string }[];
-export const FOOTER_PAGES = footerData.pages as readonly { label: string; href: string }[];
+
+const docs = footerData.docs as {
+    home: { label: string; href: string };
+    pages: readonly { label: string; href: string }[];
+};
+export const DOCS_HOME = docs.home;
+export const DOCS_PAGES = docs.pages;
 
 export const COPYRIGHT = siteData.copyright;
 
@@ -89,8 +101,4 @@ export const LOGO_PATHS = {
 // ============ Sub Pages ============
 export const PAGE_CONTENT = siteData.pages as {
     team: { label: string; title: string; placeholder: string };
-    terms: { label: string; title: string; placeholder: string };
-    license: { label: string; title: string; placeholder: string };
-    communityGuidelines: { label: string; title: string; placeholder: string };
-    operatingPolicy: { label: string; title: string; placeholder: string };
 };
